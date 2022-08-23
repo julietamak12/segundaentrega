@@ -1,0 +1,733 @@
+/*reset*/ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fuentes del html*/
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: robotomonothin;
+    src: url(../fonts/robotomono-thin.ttf);
+}
+
+@font-face {
+    font-family: archivo;
+    src: url(../fonts/archivoBlack.ttf);
+}
+
+@font-face {
+    font-family: poppinsthin;
+    src: url(../fonts/poppins-thin.ttf);
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(../fonts/InconsolataCondensed-Light.ttf);
+}
+
+/*fin fuentes del html*/
+
+body{
+    background-color: black; 
+}
+
+/*grid home*/
+
+.estructura-grid {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    "item-1 item-1 item-1"
+    "item-2 item-2 item-2"
+    "item-3 item-3 item-3"
+    ;
+}
+
+.item-1{
+    color: white;
+    grid-area: item-1;
+    background-color: black;
+    height: 150px;
+}
+
+.item-2{
+    background-color: black;
+    color: white;
+    grid-area: item-2;
+    height: 250px;
+    top: 50%;
+    text-align: center;
+    left: 8%;
+}
+
+.item-3{
+    grid-area: item-3;
+    background-color: black;
+    height: 20px;
+}
+
+
+.logo img {
+    height: 80px; 
+    align-items: center;
+}
+
+/*estilos del header*/
+
+.cabezera {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    align-items: center;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 1.5rem;  
+    width: max-content;
+}
+
+.nav-menu li a:hover {
+    color: yellow;
+}
+
+.nav-menu .botonnav {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 5px 15px;
+ }
+
+ .nav-menu .botonnav:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-toggle {
+    color: yellow;
+    background-color: transparent;
+    border: 0px;
+    font-size: 30px ;
+    display: none;
+    cursor: pointer;
+}
+
+/*FIN estilos del header*/
+
+h1 {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 75px;
+}
+
+
+h4 {
+    color: white;
+    font-family: 'robotomonothin';
+    margin-top: 150px;
+    font-weight: 5px; 
+    font-size: 15px; 
+}
+
+.maquina-escribir {
+    background: transparent;
+    position: relative;
+}
+
+.maquina-escribir::after  {
+    content: "";
+    border-left: 2px solid yellow;
+    background: black;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: maquinaescribir 4s infinite alternate steps(33);
+}
+
+@keyframes maquinaescribir {
+    from {
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+.maquina-escribir2 {
+    background: transparent;
+    position: relative;
+}
+
+.maquina-escribir2::after  {
+    content: "";
+    border-left: 2px solid yellow;
+    background: black;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: maquinaescribir2 2s infinite alternate steps(20);
+}
+
+@keyframes maquinaescribir2 {
+    from {
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+.nombre{
+    color: yellow;
+}
+
+
+.buttonhome {
+    margin-top: 20px;
+    background-color: yellow;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 5px 25px;
+    font-size: 20px;
+    margin-bottom: 80px;
+    }
+
+    .buttonhome:hover {
+        background-color: transparent;
+        color: white;
+        border: 2px solid yellow;
+        }
+
+/*footer*/
+
+footer {
+    width: 100%;
+    height: 20px;
+    color: white;
+    font-family: poppins;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    bottom: 0;
+    margin-top: 100px;
+    left: 0px;
+    text-align: center;
+    position: fixed;
+}
+
+.linea {
+    border-left: 1px solid white;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    top: 20px;
+    margin-top: 90px;
+}
+
+h2.quien {
+    color: yellow;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 75px;
+    text-align: justify;
+    margin-left: 300px;
+}
+
+span.sub {
+    color: white;
+    font-family: 'robotomonothin';
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 50px;  
+    line-height: 2px;
+    border-bottom: 10px solid yellow;
+}
+
+h3 {
+    font-family: 'robotomonothin';
+    text-align: justify;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.secciones {
+    grid-area: secciones;
+    margin-top: 30px;
+    align-items: left;
+    margin-left: 55px;
+}
+
+.about {
+    grid-area: about;
+    display: flex; 
+    padding: 6rem 15rem 0rem 15rem;
+    gap: 80px;
+}
+
+.aboutinfo{
+    text-align: justify;
+    padding-top: 20px;
+}
+
+.informacion {
+    color: white;  
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+.aboutfoto .fotocv {
+    width: 170px;
+}
+
+.datosjuli {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+span.color{
+    color: yellow;
+}
+
+.datosjuli p {
+    font-family: 'robotomonothin';
+}
+
+.buttondescarga {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+
+.buttondescarga:hover {
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+
+.fa-cloud-arrow-down  {
+    margin-right: 10px;
+}
+
+.experienciayeducacion {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 180px;
+    margin-bottom: 50px;
+    margin-top: 180px;
+
+}
+
+.experiencia  {
+    margin-left: 320px;
+
+}
+
+.educacion  {
+    margin-right: 320px;
+}
+
+.timeline ul {
+    list-style: none;
+    border-left: 3px solid yellow;
+    padding-left: 25px;
+}
+
+
+.timeline {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+
+.timeline li {
+    color: white;
+    font-family: 'Roboto Mono', monospace; 
+    font-weight: bold;
+    font-size: 35px;
+    padding: 10px;
+    margin-top: 35px;
+    align-items: left;
+  }
+
+
+h5 {
+    font-family: 'robotomonothin';
+    font-size: 25px;
+}
+
+.periodo{
+    font-family: 'robotomonothin';
+    font-size: 15px;
+    color: yellow;
+}
+
+.puesto{
+    margin-top: 10px;
+    font-family: 'robotomonothin';
+    font-size: 12px;
+    color: white
+}
+
+.empresa {
+    font-family: 'robotomonothin';
+    font-size: 18px;
+    color: white;
+    border: 2px solid yellow;
+    padding: 10px;
+}
+
+.servicios{
+    color: white;
+    height: 60vh;
+}
+
+
+.fa-circle-check{
+    color: yellow;
+    margin-right: 10px;
+}
+
+.fa-paintbrush-pencil {
+    color: yellow;
+    margin-right: 10px;
+}
+
+
+.servicio1  {
+    font-family: 'robotomonothin';
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.servicio1 p {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.timeline-content p.empresa:after {
+    content: "•";
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    left: -57px;
+    top: -25px;
+    font-size: 70px;
+    z-index: 99999;
+}
+
+.timeline-content {
+    position: relative;
+}
+
+span.servicio  {
+    line-height: 5px;
+    border-bottom: 10px solid yellow;
+    font-family: 'robotomonothin';
+    font-size: 25px;
+    color: white;
+}
+
+.servicios {
+    display: flex;
+    width: 100%;
+    gap: 130px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.lenguaje{
+    height: 100vh;
+}
+
+p.education {
+    line-height: 5px;
+    border-bottom: 10px solid yellow;
+    font-family: 'robotomonothin';
+    font-size: 25px;
+    color: white;
+
+}
+
+.contenedor-skills{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+}
+
+
+.skills h2{
+    font-family: 'poppins';
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom:  5px;
+    text-align: justify;
+}
+
+.progress-bar{
+    background: white;
+    height: 10px;
+    width: 600px;
+    border-radius: 5px;
+
+}
+
+.progress-bar div {
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+
+
+}
+
+.progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: black;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'robotomonothin';
+    font-size: 12px;
+}
+
+.spanish {
+   background:  rgb(226, 255, 8);
+   animation: spanish 1s linear forwards;
+}
+.english {
+    background:  rgb(6, 182, 144);
+    animation: english 1s linear forwards;
+ }
+ .italian {
+    background:  rgb(126, 221, 3);
+    animation:  italian 1s linear forwards;
+ }
+
+ .spanish span {
+    border: 1px solid rgb(226, 255, 8);
+ }
+ .english span {
+    border: 1px solid rgb(6, 182, 144);
+ }
+ .italian span {
+    border: 1px solid rgb(126, 221, 3);
+ }
+
+
+ @keyframes spanish{
+    100%{
+        width: 100%;
+    }
+ }
+
+ @keyframes english{
+    100%{
+        width: 50%;
+    }
+ }
+
+ @keyframes italian{
+    100%{
+        width: 85%;
+    }
+ }
+
+
+
+
+/*boton desplegable redes sociales*/
+
+#btn-mas{
+    display: none;
+}
+.containerred{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding-bottom: 25px;
+}
+.redes a, .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: white;
+    color: black;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+.redes a:hover{
+    background: #fff;
+    color: yellow;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-mas label{
+    cursor: pointer;
+    background: yellow;
+    font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+    transform: rotate(135deg);
+    font-size: 25px;
+}
+
+/*FIN boton desplegable redes sociales*/
+
+
+/*media queary*/
+
+@media (max-width: 768px) {
+    .item-1{
+        height: 100px;
+    }
+
+    .logo img {
+        margin-top: 15px;
+        height: 60px; 
+        padding-right: 20px;
+    }
+
+    .cabezera {
+        display: flex;
+        justify-content: center;
+        padding-top: 0rem;
+        margin-right: 15rem;
+        margin-left: 15rem;
+        align-items: center;
+    
+        max-width: 992px;
+    }
+
+    nav.cabezera {
+        padding-top: 5px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        background-color: black;
+        padding-right: 15px;
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        padding-right: 0px;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        padding-top: 50px;
+
+        left: 100%;
+        transition: left 0.3s ;
+    }
+    
+    .nav-menu li a {
+        color: white;
+        font-family: 'Roboto Mono', monospace;
+        margin-left: 1.5rem;  
+        width: max-content;
+        line-height: 35px;
+        font-size: 25px;
+    }
+    
+    .nav-menu li a:hover {
+        color: yellow;
+    }
+    
+    .nav-menu .botonnav {
+        background-color: transparent;
+        color: white;
+        border-radius: opx;
+        border: 0px;
+        padding: 0px 0px;
+     }
+    
+     .nav-menu .botonnav:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-toggle {
+        display: block;
+        padding-top: 12px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+}
+
+@media only screen and (max-widht: 580px){
+    .progresocircular{
+        display: inline;
+
+    }
+
+
+}
+
+
+
+
+
+
